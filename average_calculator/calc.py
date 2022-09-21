@@ -11,12 +11,11 @@ def calculator():
     while not finished:
         user_input = input("Enter an integer or 'compute': ")
         
-        if user_input == "compute":
-            if numbers==[]:
-                print("You must enter at least one number before calculating an average")
-            else:
-                print_average(numbers)
-                finished=True
+        if user_input == "compute" and numbers==[]:
+            print("You must enter at least one number before calculating an average")
+        elif user_input=="compute":
+            print_average(numbers)
+            finished=True
             """try:
                 print_average(numbers)
                 finished = True
